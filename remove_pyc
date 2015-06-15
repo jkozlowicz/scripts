@@ -1,0 +1,4 @@
+#!/bin/bash
+# Removes .pyc files recurisvely in the current directory
+
+sudo find . -name "*.pyc" -exec rm -rf {} \;
