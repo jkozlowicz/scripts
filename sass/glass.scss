@@ -1,0 +1,17 @@
+// Code for masking the webpage until everything is loaded/set up by javascript
+// Can also be used with some transparent background for displaying modals
+
+.glass {
+  background-color: white;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.glass {
+    visibility: hidden;
+    opacity: 0;
+}

@@ -1,0 +1,9 @@
+@mixin border-radius($top-left, $top-right, $bottom-left, $bottom-right) {
+    -webkit-border-radius: $top-left $top-right $bottom-left $bottom-right;
+    -moz-border-radius: $top-left $top-right $bottom-left $bottom-right;
+    -ms-border-radius: $top-left $top-right $bottom-left $bottom-right;
+    border-radius: $top-left $top-right $bottom-left $bottom-right;
+}
+
+// Usage:
+// @include border-radius(5px, 5px, 5px, 5px);

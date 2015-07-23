@@ -1,0 +1,8 @@
+@mixin box-shadow($top-left, $top-right, $bottom-left, $bottom-right, $color) {
+    -moz-box-shadow:    $top-left $top-right $bottom-left $bottom-right $color;
+    -webkit-box-shadow: $top-left $top-right $bottom-left $bottom-right $color;
+    box-shadow:         $top-left $top-right $bottom-left $bottom-right $color;
+}
+
+// Usage:
+// @include box-shadow(2px, 2px, 6px, 4px, #d3d3d3);
