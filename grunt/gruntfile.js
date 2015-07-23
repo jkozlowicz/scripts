@@ -1,3 +1,23 @@
+/* Sample directory Structure:
+
+bin  tree ../static -d
+../static
+├── css
+│   └── dist
+├── fonts
+│   └── aileron
+├── images
+├── js
+│   ├── dist
+│   └── libs
+└── sass
+    └── partials
+
+*/
+
+
+
+
 module.exports = function(grunt) {
 
     var jsSrc = '../static/js',
