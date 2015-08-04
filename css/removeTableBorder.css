@@ -1,0 +1,11 @@
+// Without border-collapse cross-browser removal of table cells is not guaranteed.
+// source: http://stackoverflow.com/questions/10131729/removing-border-from-table-cell
+
+table {
+        border:1px solid #CCC;
+            border-collapse:collapse;
+}
+td {
+        border:none;
+}
+
