@@ -39,6 +39,20 @@ function() {
     );
 }();
 
+// A necessary modification so that results are displayed correctly is
+// on line 1719 in typeahead.bundle.js
+        function async(suggestions) {
+            suggestions = suggestions || [];
+            if (!canceled && rendered < that.limit) {
+                that.cancel = $.noop;
+
+                suggestions = (suggestions || []).slice(0, that.limit);
+                rendered = suggestions.length;
+                that._append(query, suggestions);
+
+                that.async && that.trigger("asyncReceived", query);
+            }
+        }
 
 // In order for this to work with Bootstrap 3, following CSS has to be included:
 
