@@ -14,12 +14,23 @@ function() {
         prefetch: '/ajax?username',
         remote: {
             url: '/ajax?username=%QUERY',
-            filter: function( usernames ) {
-                return $.map(usernames, function(username) {
-                    return {
-                        value: username.value
-                    };
-                })
+            filter: function( items ) {
+                var results = [],
+                    tmpItems = [];
+
+                for( var i = 0; i < items.length; i++ ) {
+
+                    var item = items[i];
+                    if ( !_.contains(tmpItems, item.value) ) {
+
+
+                        tmpItems.push(item.value);
+                        results.push(item);
+                    }
+
+                }
+
+                return results;
             },
             wildcard: '%QUERY'
         }
